@@ -1,15 +1,17 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
 
-client.on('message', (message) => {
-
-    if(message.content == '!play sketchers') {
-        message.reply('shut the fuck up');
-    }
-
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
-bot.login('NjkyMjgxODgzMjg2OTYyMTk2.XnsQ7w.Lclvc6IN8F16l8UQL8SRVvOtx1s');
+client.on('message', msg => {
+  if (msg.content === '!play sketchers') {
+    msg.reply('shut the fuck up');
+  }
+});
+
+client.login('NjkyMjgxODgzMjg2OTYyMTk2.XnskTA.W043rNTsR1LeuDAmJHKESLKtgzc');
 
 
 
