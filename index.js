@@ -11,8 +11,5 @@ client.on('message', msg => {
   }
 });
 
-client.login(process.emv.BOT_TOKEN);
-
-
 
 
